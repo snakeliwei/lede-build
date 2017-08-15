@@ -14,6 +14,7 @@ RUN apk add --no-cache \
 	libc-dev \
 	gcc \
 	g++ \
+	patch \
 	linux-headers \
 	make \
 	musl-dev \
