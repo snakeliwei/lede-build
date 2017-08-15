@@ -23,6 +23,7 @@ RUN apk add --no-cache \
 	ncurses-dev \
 	zlib-dev \
 	libxslt-dev \
+	pcre-dev \
 	file \
 	openssl-dev
         
