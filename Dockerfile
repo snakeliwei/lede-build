@@ -1,23 +1,22 @@
 FROM ubuntu:16.04
 MAINTAINER Lyondon <snakeliwei@gmail.com>
 
-RUN apt-get update && \
-    apt-get -y install \
-    subversion \
-    g++ \
-    zlib1g-dev \
-    build-essential \
-    git \
-    python \
-    rsync \
-    man-db \
-    libncurses5-dev \
-    gawk \
-    gettext \
-    unzip \
-    file \
-    libssl-dev \
-    wget  && \
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        subversion \
+        g++ \
+        zlib1g-dev \
+        build-essential \
+        git \
+        python \
+        rsync \
+        man-db \
+        libncurses5-dev \
+        gawk \
+        gettext \
+        unzip \
+        file \
+        libssl-dev \
+        wget  && \
     mkdri -p /src && \
     git clone --depth=1 https://git.lede-project.org/source.git /src/lede && \
     /src/lede/scripts/feeds update -a && \
