@@ -1,23 +1,30 @@
-FROM ubuntu:16.04
+FROM alpine:3.6
 MAINTAINER Lyondon <snakeliwei@gmail.com>
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-        ca-certificates \
-        subversion \
-        g++ \
-        zlib1g-dev \
-        build-essential \
-        git \
-        python \
-        rsync \
-        man-db \
-        libncurses5-dev \
-        gawk \
-        gettext \
-        unzip \
-        file \
-        libssl-dev \
-        wget
+# add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
+RUN addgroup -S lede && adduser -S -G lede lede
+
+# grab su-exec for easy step-down from root
+RUN apk add --no-cache \
+                'su-exec>=0.2' \
+                ca-certificates \
+                bash \
+                coreutils \
+		gcc \
+		linux-headers \
+		make \
+		musl-dev \
+                git \
+                subversion \
+                python \
+                gawk \
+                gettext \
+                wget \
+                ncurses-dev \
+                zlib-dev \
+                libxslt-dev \
+                file \
+                openssl-dev
         
 RUN mkdir -p /src && \
     git clone --depth=1 git://git.lede-project.org/source.git /src/lede && \
