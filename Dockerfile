@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 MAINTAINER Lyondon <snakeliwei@gmail.com>
 
 RUN apt-get update && \
-    apt-get install \
+    apt-get -y install \
     subversion \
     g++ \
     zlib1g-dev \
