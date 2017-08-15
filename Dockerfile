@@ -6,25 +6,25 @@ RUN addgroup -S lede && adduser -S -G lede lede
 
 # grab su-exec for easy step-down from root
 RUN apk add --no-cache \
-                'su-exec>=0.2' \
-                ca-certificates \
-                bash \
-                coreutils \
-		gcc \
-		linux-headers \
-		make \
-		musl-dev \
-                git \
-                subversion \
-                python \
-                gawk \
-                gettext \
-                wget \
-                ncurses-dev \
-                zlib-dev \
-                libxslt-dev \
-                file \
-                openssl-dev
+	'su-exec>=0.2' \
+	ca-certificates \
+	bash \
+	coreutils \
+	gcc \
+	linux-headers \
+	make \
+	musl-dev \
+	git \
+	subversion \
+	python \
+	gawk \
+	gettext \
+	wget \
+	ncurses-dev \
+	zlib-dev \
+	libxslt-dev \
+	file \
+	openssl-dev
         
 RUN mkdir -p /src && \
     git clone --depth=1 git://git.lede-project.org/source.git /src/lede && \
