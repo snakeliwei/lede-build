@@ -10,7 +10,10 @@ RUN apk add --no-cache \
 	ca-certificates \
 	bash \
 	coreutils \
+	perl \
+	libc-dev \
 	gcc \
+	g++ \
 	linux-headers \
 	make \
 	musl-dev \
