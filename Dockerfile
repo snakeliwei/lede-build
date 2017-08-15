@@ -16,8 +16,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         unzip \
         file \
         libssl-dev \
-        wget  && \
-    mkdir -p /src && \
+        wget
+        
+RUN mkdir -p /src && \
     git clone --depth=1 git://git.lede-project.org/source.git /src/lede && \
     /src/lede/scripts/feeds update -a && \
     /src/lede/scripts/feeds install -a
