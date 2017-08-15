@@ -25,6 +25,12 @@ RUN apk add --no-cache \
 	wget \
 	ncurses-dev \
 	zlib-dev \
+	ccache \
+	tar \
+	unzip \
+	bzip2 \
+	find \
+	grep \
 	libxslt-dev \
 	pcre-dev \
 	file \
