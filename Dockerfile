@@ -29,7 +29,7 @@ RUN apk add --no-cache \
 	tar \
 	unzip \
 	bzip2 \
-	find \
+	findutils \
 	grep \
 	libxslt-dev \
 	pcre-dev \
