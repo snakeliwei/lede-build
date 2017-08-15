@@ -18,8 +18,8 @@ RUN apt-get update && \
     file \
     libssl-dev \
     wget  && \
-    mkdri -p /src
-    git clone https://git.lede-project.org/source.git /src/lede && \
+    mkdri -p /src && \
+    git clone --depth=1 https://git.lede-project.org/source.git /src/lede && \
     /src/lede/scripts/feeds update -a && \
     /src/lede/scripts/feeds install -a
 
