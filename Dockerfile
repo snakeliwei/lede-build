@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 MAINTAINER Lyondon <snakeliwei@gmail.com>
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
+        ca-certificates \
         subversion \
         g++ \
         zlib1g-dev \
