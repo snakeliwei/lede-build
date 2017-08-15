@@ -38,7 +38,7 @@ RUN apk add --no-cache \
 	openssl-dev
         
 RUN mkdir -p /src && \
-    git clone --depth=1 git://git.lede-project.org/source.git /src/lede && \
+    git clone https://git.lede-project.org/source.git /src/lede && \
     echo "src-git oldpackages http://git.openwrt.org/packages.git" >> /src/lede/feeds.conf.default && \
     /src/lede/scripts/feeds update -a && \
     /src/lede/scripts/feeds install -a
